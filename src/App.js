@@ -11,10 +11,9 @@ class App extends Component {
     };
   }
 
-  buttonClick() {
-    // let name = prompt(`What's your name?`);
-    console.log(this.state);
-  }
+  buttonClick = () => {
+    alert("something happened...");
+  };
 
   render() {
     return (
@@ -22,8 +21,18 @@ class App extends Component {
         <Person name="Muhammad Naeem Tahir" age="22" desc="student" />
 
         {/* event rebinding */}
-        <button type="button" onClick={() => this.buttonClick()}>
-          Click me
+        <button
+          type="button"
+          onClick={this.buttonClick}
+          style={{
+            backgroundColor: "#020202",
+            color: "#fff",
+            cursor: "pointer",
+            padding: "10px",
+            borderRadius: "5px",
+          }}
+        >
+          Remove me
         </button>
       </div>
     );
